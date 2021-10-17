@@ -144,22 +144,29 @@ h1 {
     justify-content: space-between;
 }
 
-.avatar1 {
-    width: 250px;
-    height: 250px;
-    animation: to-right 2.5s;
+.avatar1, .avatar2, .example {
+    visibility: hidden;
 }
 
-.avatar2 {
-    width: 250px;
-    height: 250px;
-    border: black;
+.avatar1.anim, .avatar2.anim, .example.anim {
+    visibility: visible;
+}
+
+.avatar1.anim {
+    width: 200px;
+    height: 200px;
+    animation: to-right 2s;
+}
+
+.avatar2.anim {
+    width: 200px;
+    height: 200px;
     border-width: 5px;
-    animation: to-left 2.5s;
+    animation: to-left 2s;
 }
 
-.example {
-    animation: to-top 2.5s;
+.example.anim {
+    animation: to-top 2s;
 }
 
 h2 {
