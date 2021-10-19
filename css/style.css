@@ -125,17 +125,17 @@ h1 {
 }
 
 @keyframes to-right {
-    0% {transform: translate(-500px);}
+    0% {transform: translate(-250px);}
     100% {transform: translate(0px);}
 }
 
 @keyframes to-left {
-    0% {transform: translate(500px);}
+    0% {transform: translate(250px);}
     100% {transform: translate(0px);}
 }
 
 @keyframes to-top {
-    0% {transform: translate(0px, 500px);}
+    0% {transform: translate(0px, 250px);}
     100% {transform: translate(0px, 0px);}
 }
 
@@ -146,6 +146,7 @@ h1 {
 
 .avatar1, .avatar2, .example {
     visibility: hidden;
+    size: 0;
 }
 
 .avatar1.anim, .avatar2.anim, .example.anim {
@@ -155,18 +156,18 @@ h1 {
 .avatar1.anim {
     width: 200px;
     height: 200px;
-    animation: to-right 2s;
+    animation: to-right 1.5s;
 }
 
 .avatar2.anim {
     width: 200px;
     height: 200px;
     border-width: 5px;
-    animation: to-left 2s;
+    animation: to-left 1.5s;
 }
 
 .example.anim {
-    animation: to-top 2s;
+    animation: to-top 1.5s;
 }
 
 h2 {

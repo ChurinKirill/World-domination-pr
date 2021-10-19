@@ -10,24 +10,18 @@ function toggleAnimation(selector) {
     $(selector).toggleClass('anim');
 }
 
-function isVisible(tag) {
-    var t = $(tag);
-    var w = $(window);
-    var wt = w.scrollTop();
-    var tt = t.offset().top;
-    var tb = tt + t.height();
-    return ((tb - 1 <= wt + w.height()) && (tt >= wt - 100));
+function anim( selector) {
+    if ( $(this).scrollTop() > $(selector).offset().top - 350) {
+        $(selector).addClass('anim');
+    }
 }
 
 function animate(selector) {
-    $(function () {
-        $(window).scroll(function () {
-            var b = $(selector);
-            if (!b.prop("shown") && isVisible(b)) {
-                b.prop("shown", true);
-                toggleAnimation(selector);
-            }
-        });
+    $(window).ready(function(){
+        anim(selector);
+    });
+    $(window).scroll(function(){
+        anim(selector);
     });
 }
 
